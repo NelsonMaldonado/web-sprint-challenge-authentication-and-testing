@@ -60,5 +60,8 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
    Bcryptjs hashes passwords in a non reverseval way which makes is more secure as opposed to MD5HASH which is reverseable and there are databases with up to 12 letters.
 
 3. How are unit tests different from integration and end-to-end testing?
+   Unit tests are use to verify the correctness of one part of the system in isolation,. Integration tests test how different parts of the system work together such as the endpoints. And lastly end-to-end testing is design to simulate what a real user scenario looks like from start to finish.
 
 4. How does _Test Driven Development_ change the way we write applications and tests?
+   In theory, you can write higher quality code when you start with end (the test) in mind.
+   By first writting the test for the functions you need to create first, once you write your code and it passes your own tests, you will know that you created something that you can be confident of.
