@@ -16,4 +16,20 @@ test("sanity", () => {
   expect(true).toBe(true)
 })
 
-describe("")
+describe("[POST] api/auth/register", () => {
+  let res
+  beforeEach(async () => {
+    res = await request(server)
+      .post("/api/auth/register")
+      .send({ username: "nelly", password: "1234" })
+  })
+
+  it("responds with status 201", async () => {
+    expect(res.status).toBe(201)
+  })
+
+  it("has 1 user in db", async () => {
+    const users = await db("users")
+    expect(users).toHaveLength(1)
+  })
+})
