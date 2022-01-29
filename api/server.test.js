@@ -1,4 +1,7 @@
 // Write your tests here
-test('sanity', () => {
+const server = require("./server")
+const request = require()
+
+test("sanity", () => {
   expect(true).toBe(false)
 })
